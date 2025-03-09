@@ -1,29 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--CSS-->
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+
+    <title> Artwork Catalog</title>
 </head>
-
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="scream.html">Scream</a>
-        <a href="inventory.html">Inventory</a>
-        <a href="previous_artwork.html">Previous Artwork</a>
-        <a href="development.html">Art In Developement</a>
-        <a href="client.html">Client</a>
-        <a href="ideas.html">Project Ideas</a>
-        <a href="dreamlist.html">Dream List</a>
-    </nav>
-    <h1>Home</h1>
-    <div class="container-i">
-        <img src="images/stock.png">
-    </div>
-</body>
 
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Artisan Artwork</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
+                    <li class="nav-item"><a class="nav-link" href="development.html">Pieces in Development</a></li>
+                    <li class="nav-item"><a class="nav-link" href="previous_artwork.html">Previous Artwork</a></li>
+                    <li class="nav-item"><a class="nav-link" href="client.html">Client List</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ideas.html">Project Ideas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container mt-5">
+        <h1 class="text-center">Welcome to Artisan Artwork Catalog</h1>
+        <p class="lead text-center">Explore our inventory, artwork in progress, and future projects.</p>
+
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/Images/inventory.jpeg" class="card-img-top" alt="Inventory">
+                    <div class="card-body">
+                        <h5 class="card-title">Inventory</h5>
+                        <p class="card-text">View available materials.</p>
+                        <a href="inventory.html" class="btn btn-primary">View</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/Images/art5.jpeg" class="card-img-top" alt="In Development">
+                    <div class="card-body">
+                        <h5 class="card-title">Pieces in Development</h5>
+                        <p class="card-text">Check out ongoing projects.</p>
+                        <a href="development.html" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/Images/art1.jpeg" class="card-img-top" alt="Previous Artwork">
+                    <div class="card-body">
+                        <h5 class="card-title">Previous Artwork</h5>
+                        <p class="card-text">Browse past pieces.</p>
+                        <a href="previous_artwork.html" class="btn btn-primary">See Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="mt-5">
+            
+        </div>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
