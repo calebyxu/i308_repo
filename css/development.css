@@ -1,0 +1,34 @@
+/* General */
+:root {
+    --green: #4CAF50
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", "san-serif";
+}
+
+.header {
+    align-self: center;
+}
+
+/* NavBar */
+nav {
+    margin-top: 20px;
+    height: 35px;
+    border-bottom: 2px solid black;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    height: 10px;
+}
+
+nav a:hover {
+    background-color:lightgrey;
+    transition: 0.3s;
+}
