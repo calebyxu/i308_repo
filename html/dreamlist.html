@@ -39,19 +39,19 @@
         <h1 class="text-center">Dream List</h1>
         <p class="lead text-center">Describe your dream artwork, and we will help bring it to life.</p>
 
-
-        <form action="#" method="post" class="mt-4">
+        <!-- probabablly want to put a limit on the differnt sections based on our data, minlength/maxlength -->
+        <form action="dreamlist.php" method="POST" class="mt-4">
             <div class="mb-3">
                 <label for="name" class="form-label">Your Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                <input type="text" name="form-name" class="form-control" id="name" placeholder="Enter your name">
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <input type="email" name="form-email" class="form-control" id="email" placeholder="Enter your email">
             </div>
             <div class="mb-3">
                 <label for="artType" class="form-label">Preferred Art Style</label>
-                <select class="form-select" id="artType">
+                <select name="form-style" class="form-select" id="artType">
                     <option value="">Select an art style</option>
                     <option value="painting">Painting</option>
                     <option value="sculpture">Sculpture</option>
@@ -62,8 +62,9 @@
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Describe Your Ideal Artwork</label>
-                <textarea class="form-control" id="description" rows="4"
+                <textarea name="form-desc" class="form-control" id="description" rows="4"
                     placeholder="Describe your dream artwork..."></textarea>
+
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
