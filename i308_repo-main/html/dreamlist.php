@@ -62,6 +62,16 @@ $dbname = 'i308s25_team53';
 
             $sql = "INSERT INTO DreamList (name, email, style, description) 
             VALUES ('$name', '$email', '$style', '$desc')";
+
+        if (mysqli_query($conn, $sql)) {
+            echo "<h2>New Dream List Item inserted successfully!</h2>";
+            echo "<p><strong>Name:</strong> $name <br>";
+            echo "<strong>Email:</strong> $email<br>";
+            echo "<strong>Style:</strong> $style<br>";
+            echo "<strong>Description:</strong> $desc</p>";
+            } else {
+                    echo "<h2>Error inserting item:</h2> " . mysqli_error($conn);
+                    }
             //above needs to be completed
             
             if (mysqli_query($con,$sql))
