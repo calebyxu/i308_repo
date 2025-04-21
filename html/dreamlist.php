@@ -40,7 +40,12 @@
         <p class="lead text-center">Describe your dream artwork, and we will help bring it to life.</p>
 
         <?php
-            $con=mysqli_connect();
+
+$host = 'db.luddy.indiana.edu';
+$user = 'i308s25_team53';   
+$pass = 'lodes3344tinge';          
+$dbname = 'i308s25_team53'; 
+            $con=mysqli_connect($host, $user, $pass, $dbname);
             //above needs to be completed
             // Check connection
             if (!$con) {
