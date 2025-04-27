@@ -41,39 +41,9 @@
         <p class="lead text-center">Browse our collection of completed and sold artwork.</p>
 
 
+        
         <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../images/art2.jpeg" class="card-img-top" alt="Artwork 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Rainy Walk</h5>
-                        <p class="card-text">An impressionist-style painting capturing a peaceful walk through a
-                            rain-soaked autumn street. Sold to Emily Carter.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../images/art3.jpeg" class="card-img-top" alt="Artwork 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Autumn Romance</h5>
-                        <p class="card-text">A warm and vibrant oil painting depicting a couple embracing under a red
-                            umbrella in a golden autumn park. Sold to David Richardson.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../images/art4.jpeg" class="card-img-top" alt="Artwork 3">
-                    <div class="card-body">
-                        <h5 class="card-title">The Red Muse</h5>
-                        <p class="card-text">A striking modern portrait of a woman in deep thought, painted with
-                            expressive brushstrokes in fiery hues. Sold to Sophia Martinez.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php
+<?php
 $con = mysqli_connect("db.luddy.indiana.edu", "i308s25_team53", "lodes3344tinge", "i308s25_team53");
 
 if (!$con) {
@@ -113,14 +83,14 @@ if ($result && mysqli_num_rows($result) > 0) {
 mysqli_free_result($result);
 mysqli_close($con);
 ?>
+</div> 
+
+       
+        
 
 
 
-
-
-
-
-    </div>
+   
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
