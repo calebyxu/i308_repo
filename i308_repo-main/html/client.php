@@ -20,7 +20,7 @@
                 <li class="nav-item"><a class="nav-link" href="development.php">Artwork in Development</a></li>
                 <li class="nav-item"><a class="nav-link" href="previous_artwork.php">Previous Artwork</a></li>
                 <li class="nav-item"><a class="nav-link active" href="client.php">Client List</a></li>
-                <li class="nav-item"><a class="nav-link" href="ideas.html">Project Ideas</a></li>
+                <li class="nav-item"><a class="nav-link" href="ideas.php">Project Ideas</a></li>
                 <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
             </ul>
         </div>
