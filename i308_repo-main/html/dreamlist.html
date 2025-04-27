@@ -22,7 +22,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inventory.php">Inventory</a></li>
                     <li class="nav-item"><a class="nav-link" href="development.php">Artwork in Development</a></li>
                     <li class="nav-item"><a class="nav-link" href="previous_artwork.php">Previous Artwork</a></li>
                     <li class="nav-item"><a class="nav-link" href="client.php">Client List</a></li>
