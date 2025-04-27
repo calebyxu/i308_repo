@@ -31,6 +31,18 @@
     <h1 class="text-center">Client List</h1>
     <p class="lead text-center">Explore our current, past, and prospective clients.</p>
 
+    
+    <form method="GET" class="mb-4 text-center">
+        <label for="status">Filter by Client Status:</label>
+        <select name="status" id="status" class="form-select d-inline w-auto">
+            <option value="All">All</option>
+            <option value="Current Client">Current Client</option>
+            <option value="Past Client">Past Client</option>
+            <option value="Prospective Client">Prospective Client</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+
     <table class="table">
         <thead>
             <tr>
@@ -47,22 +59,39 @@ if (!$con) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT nameF, nameL, status, email FROM Client";
-$result = mysqli_query($con, $sql);
 
-if ($result && mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tr>";
-        echo "<td>" . htmlspecialchars($row['nameF']) . " " . htmlspecialchars($row['nameL']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['status']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['email']) . "</td>";
-        echo "</tr>";
-    }
+$statusFilter = isset($_GET['status']) ? $_GET['status'] : 'All';
+
+
+if ($statusFilter == 'All') {
+    $sql = "SELECT nameF, nameL, status, email FROM Client";
 } else {
-    echo "<tr><td colspan='3'>No clients found.</td></tr>";
+    $sql = "SELECT nameF, nameL, status, email FROM Client WHERE status = ?";
 }
 
-mysqli_free_result($result);
+
+if ($stmt = mysqli_prepare($con, $sql)) {
+    if ($statusFilter != 'All') {
+        mysqli_stmt_bind_param($stmt, "s", $statusFilter);
+    }
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>";
+            echo "<td>" . htmlspecialchars($row['nameF']) . " " . htmlspecialchars($row['nameL']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['status']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['email']) . "</td>";
+            echo "</tr>";
+        }
+    } else {
+        echo "<tr><td colspan='3'>No clients found.</td></tr>";
+    }
+
+    mysqli_stmt_close($stmt);
+}
+
 mysqli_close($con);
 ?>
         </tbody>
