@@ -14,7 +14,7 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">Artisan Artwork</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -22,18 +22,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
-                    <li class="nav-item"><a class="nav-link" href="previous_artwork.html">Previous Artwork</a></li>
-                    <li class="nav-item"><a class="nav-link" href="development.html">Artwork In Development</a></li>
+                    <li class="nav-item"><a class="nav-link" href="development.php">Artwork in Development</a></li>
+                    <li class="nav-item"><a class="nav-link" href="previous_artwork.php">Previous Artwork</a></li>
                     <li class="nav-item"><a class="nav-link" href="client.html">Client List</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="ideas.html">Project Ideas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ideas.html">Project Ideas</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dreamlist.php">Dream List</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
 
     <div class="container mt-5">
         <h1 class="text-center">Dream List</h1>
